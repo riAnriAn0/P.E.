@@ -47,7 +47,7 @@ int main(){
 
     printf("\nO Maior valor e: %d\n", maior);
     printf("O menor valor e: %d\n", menor);
-    printf("A media e: %.2f", media);
+    printf("A media dos valores: %.2f", media);
     
     return 0;
 }
