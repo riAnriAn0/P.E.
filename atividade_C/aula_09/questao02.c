@@ -1,37 +1,31 @@
 #include <stdio.h>
 
+// criando struct base
+struct Aluno
+{
+    int idade;
+    int matricula;
+    float nota;
+};
+
+typedef struct Aluno Aluno;
+
 int main(){
 
-    int matriz[5][5];
-    int cont = 0;
+    Aluno aluno;
 
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 5; j++)
-        {
-            if (j == cont){
-                matriz[i][j] = 1;
-            } else {
-                matriz[i][j] = 0;
-            }
-        }
-        cont++;
-    }
+    printf("\n\n=-=-=-=- Inserindo Dados do Aluno =-=-=-=-\n");
+    printf("Digite a idade: ");
+    scanf("%d", &aluno.idade );
+    printf("Digite seu numero de matricula : ");
+    scanf("%d", &aluno.matricula);
+    printf("Digite sua nota: ");
+    scanf("%f", &aluno.nota);
+    printf("\n-=-=-==-=-==-=-==-=-=-=-=-====-=-=-=-=-=-=-=-=\n\n");
 
-
-    for (int i = 0; i < 5; i++)
-    {
-        printf("[");
-        for (int j = 0; j < 5; j++)
-        {
-            printf(" %d ", matriz[i][j]);
-            if (!(j == 4))
-            {
-                printf(",");
-            }
-        }  
-        printf("]\n");
-    }
-    
+    printf("=-=-=-= Dados do Aluno =-=-=-=-\n");
+    printf("Idade: %d\n", aluno.idade);
+    printf("Matricula: %d\n", aluno.matricula);
+    printf("Nota: %.2f\n\n", aluno.nota);
     return 0;
 }

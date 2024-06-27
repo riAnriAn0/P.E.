@@ -1,42 +1,34 @@
 #include <stdio.h>
+#include <locale.h>
+
+// criando struct base
+struct pessoa
+{
+    char cpf[12];
+    int idade;
+    float peso;
+};
+
+typedef struct pessoa pessoa;
 
 int main(){
+    setlocale(LC_ALL, "Portuguese");
 
-    int matriz[4][4];
+    pessoa pessoa_1;
 
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            printf("Digit um valor: ");
-            scanf("%d", &matriz[i][j]);
-        }  
-    }
+    printf("==============================\n");
+    printf("Digite seu CPF: ");
+    scanf("%s", pessoa_1.cpf);
+    printf("Digite seu Idade: ");
+    scanf("%d", &pessoa_1.idade);
+    printf("Digite seu Peso: ");
+    scanf("%f", &pessoa_1.peso);
+    printf("\n==============================\n\n\n");
 
+    printf("======== Dados ==========\n");
+    printf("CPF: %s\n", pessoa_1.cpf);
+    printf("Idade: %d anos\n", pessoa_1.idade);
+    printf("Peso: %.2f Kg\n\n", pessoa_1.peso);
 
-    printf("Matriz: \n");
-    for (int i = 0; i < 4; i++)
-    {
-        printf("[ ");
-        for (int j = 0; j < 4; j++)
-        {
-            printf("%d ,", matriz[i][j]);
-        }
-        printf("]\n");
-    }
-
-    int maior10 = 0;
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            if( matriz[i][j] > 10){
-                maior10 ++;
-            }
-        }  
-    }
-
-    printf("Quantidade de valores maiores que 10: %d", maior10);
-    
     return 0;
 }

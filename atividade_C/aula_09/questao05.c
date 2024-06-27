@@ -1,51 +1,41 @@
 #include <stdio.h>
 
+struct Produto
+{
+    int codigo;
+    float preco;
+    int qnt_estoque;
+    int validade[3];
+};
+
+
+typedef struct Produto produto;
+
 int main(){
-    
-    int matriz[3][3] = {{5,8,12},{10,9,20},{3,11,8}};
-    int l1[3], l2[3], l3[3];
 
-    for (int i = 0; i < 3; i++)
-    {
-        l1[i] = matriz[0][i];
-        l2[i] = matriz[1][i];
-        l3[i] = matriz[2][i];
-    }
-    printf("\n\nNormal: \n");
-    for (int i = 0; i < 3; i++)
-    {
-        printf("[");
-        for (int j = 0; j < 3; j++)
-        {
-            printf (" %d ", matriz[i][j]);
-            if (!(j == 2))
-            {
-                printf(",");
-            }
-        }  
-        printf("]\n");
-    }
+    produto novo_produto;
 
-    for (int i = 0; i < 3; i++)
-    {
-        matriz [i][0] = l1[i];
-        matriz [i][1] = l2[i];
-        matriz [i][2] = l3[i];
-    }
+    printf("\n\n=-=-=-=-=- Produto =-=-=-=-=-\n");
+    printf("Digigte o Codigo: ");
+    scanf("%d", &novo_produto.codigo);
+    printf("Digite o Preco: ");
+    scanf("%f", &novo_produto.preco);
+    printf("Digigte a quantidade em estoque: ");
+    scanf("%d", &novo_produto.qnt_estoque);
+    printf("Digite a Data de validade\n");
+    printf("    Dia: ");
+    scanf("%d", &novo_produto.validade[0]);
+    printf("    Mes: ");
+    scanf("%d", &novo_produto.validade[1]);
+    printf("    Ano: ");
+    scanf("%d", &novo_produto.validade[2]);
 
-    printf("\n\nInversa: \n");
-    for (int i = 0; i < 3; i++)
-    {
-        printf("[");
-        for (int j = 0; j < 3; j++)
-        {
-            printf (" %d ", matriz[i][j]);
-            if (!(j == 2))
-            {
-                printf(",");
-            }
-        }  
-        printf("]\n");
-    }
+    printf("\n\n=-=-=-=-=- Detalhe do Produto =-=-=-=-=-\n");
+    printf("Codigo: %d\n", novo_produto.codigo);
+    printf("Preco: %.2f\n", novo_produto.preco);
+    printf("Quant. Estoque: %d\n", novo_produto.qnt_estoque);
+    printf("Validade: %d/%d/%d \n\n\n", novo_produto.validade[0], novo_produto.validade[1], novo_produto.validade[2]);
+
+
     return 0;
 }
