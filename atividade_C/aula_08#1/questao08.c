@@ -2,44 +2,35 @@
 
 int main(){
     
-    int numeros[20];
-    int sem_repeticao[20];
-    int cont_rept[20];
+int vetor[20];
+int qnt = 0;
 
-    for (int i = 0; i < 20 ; i++)
-    {
-        printf("Digite um valor: ");
-        scanf("%d" , &numeros[i]);
-    }
-    
-    int a;
+for( int i = 0; i < 20; i++){
 
-    for (int p = 0; p < 20; p++)
-    {
-        a = numeros[p];
+    int value = 0;
+    printf("\nDigite um valor: ");
+    scanf("%d", &value);
 
-        for (int q = 0; q < 20; q++)
-        {
-            if (a == numeros[q])
-            {
-                for (int j = q+1; j < (20-q+1); j++)
-                {
-                    if (a == numeros[q])
-                    {
-                        
-                    }
-                    
-                }
-                
-            }
-            
+    int achou = 0;
+
+    for(int j = 0; j < qnt; j++){
+        if(value == vetor[j]){
+            achou = 1;
+            break;
         }
     }
-    
 
-    for (int i = 0; i <  20; i++)
-    {
-        printf("%d ,", sem_repeticao[i]);
+    if(achou == 0){
+        vetor[qnt] = value;
+        qnt = qnt + 1;
     }
+}
+
+    printf("\nVetor");
+
+    for(int i = 0; i < qnt; i++){
+        printf("%d\n", vetor[i]);
+    }
+
     return 0;
 }
