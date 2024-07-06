@@ -1,0 +1,16 @@
+1. Assinale V ou F para as afirmações abaixo.
+
+a. ( V ) Uma estrutura de controle simples em C pode ser representada por
+uma única instrução, como uma instrução if.
+
+b. ( F ) Em uma estrutura de controle composta em C não necessita o uso
+de chaves ({ }) para delimitar o bloco de código associado a ela.
+
+c. ( V ) Uma estrutura de controle composta permite que um bloco de
+código seja executado se uma condição for verdadeira e outro bloco
+seja executado se a condição for falsa.
+
+d. ( F ) Uma estrutura de controle múltipla (switch) é menos eficiente do
+que várias estruturas de controle simples quando se trata de
+selecionar entre várias opções.
+
