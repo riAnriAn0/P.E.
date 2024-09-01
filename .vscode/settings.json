@@ -1,6 +1,7 @@
 {
-    "files.associations": {
-        "questao01.C": "cpp",
-        "files.encoding": "utf8"
-    }
+  "files.associations": {
+    "questao01.C": "cpp",
+    "files.encoding": "utf8"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
